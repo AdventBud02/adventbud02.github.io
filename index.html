@@ -17,8 +17,9 @@
 
   h1, .subtitle {
     text-align: center;
-    color: white;
+  color: white;
   }
+
 
   .subtitle {
     margin-bottom: 20px;
@@ -66,6 +67,35 @@
     color: #1a1a1a;
   }
 
+  /* YouTube section */
+  .yt-title {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .yt-button {
+    width: 420px;
+    height: 236px;
+    border: 2px solid #ff3b3b;
+    border-radius: 8px;
+    background: rgba(0,0,0,0.4);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+
+  .yt-button:hover {
+    background: rgba(255,59,59,0.2);
+    transform: scale(1.02);
+  }
+
   iframe {
     border-radius: 8px;
   }
@@ -87,13 +117,15 @@
 
 <div class="layout">
 
+  <!-- LEFT -->
   <div class="left">
     <iframe src="https://discord.com/widget?id=1473111575479976078&theme=dark"
-      width="350" height="500"
+      width="350" height="508"
       frameborder="0"
       sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
   </div>
 
+  <!-- CENTER -->
   <div class="center">
     <div class="server-ip">
       Minecraft Server IP: <strong>play.mcidiots.net</strong>
@@ -104,17 +136,26 @@
     </button>
   </div>
 
+  <!-- RIGHT -->
   <div class="right">
+
+    <div class="yt-title">Subscribe to AdventBud02!</div>
+    <a class="yt-button"
+       href="https://www.youtube.com/channel/UCovMrrV5rrD5tTujlmPza_Q"
+       target="_blank">
+      Click here to go to AdventBud02's YouTube Channel!
+    </a>
+
     <iframe
       width="420"
       height="236"
-      src="https://www.youtube.com/embed/videoseries?list=UUovMrrV5rrD5tTujlmPza_Q"
+      src="https://www.youtube.com/embed?listType=user_uploads&list=UCovMrrV5rrD5tTujlmPza_Q"
       frameborder="0"
       allowfullscreen>
     </iframe>
+
   </div>
 
 </div>
 
 </body>
-</html>
