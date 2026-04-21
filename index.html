@@ -1,84 +1,120 @@
-<!DOCTYPE HTML>
-<html>
-  <head>
-    <title>The Minecraft Idiots</title>
-    <link rel="icon" type="image/x-icon" href="icon.png">
-  </head>
-  <body>
-<style>
-body {
-  background-image: url('bg.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-</style>
-    <center>
-      <h1>The Minecraft Idiots</h1>
-      <p>The Minecraft Idiots was originally a YouTube series started by AdventBud02 and candy10882 after they realized they are total idiots.</p>
-    </center>
-<div class="copy-box">
-  <div class="server-ip">Minecraft Server IP: <strong>play.mcidiots.net</strong></div>
-  <button class="copy-btn" onclick="copyIP()">Copy IP</button>
+<!DOCTYPE html>
+
+<head>
+  <title>The Minecraft Idiots</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+
+  <style>
+  body {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  h1, .subtitle {
+    text-align: center;
+    color: white;
+  }
+
+  .subtitle {
+    margin-bottom: 20px;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    align-items: start;
+  }
+
+  .left, .center, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .server-ip {
+    font-size: 22px;
+    color: #000;
+    -webkit-text-stroke: 0.6px #5a6cff;
+    padding: 8px;
+    border: 2px solid #5a6cff;
+    border-radius: 6px;
+    background: rgba(128,128,128,0.85);
+    width: fit-content;
+    text-align: center;
+  }
+
+  .copy-btn {
+    padding: 10px 22px;
+    font-size: 16px;
+    background: transparent;
+    color: #000;
+    border: 4px solid #7CFF00;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .copy-btn:hover {
+    background: #7CFF00;
+    color: #1a1a1a;
+  }
+
+  iframe {
+    border-radius: 8px;
+  }
+
+  @media (max-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr;
+    }
+  }
+  </style>
+</head>
+
+<body>
+
+<h1>The Minecraft Idiots</h1>
+<div class="subtitle">
+  The Minecraft Idiots was originally a YouTube series started by AdventBud02 and candy10882 after they realized they are total idiots.
 </div>
 
-<style>
-.server-ip {
-  font-size: 22px;
-  letter-spacing: 1px;
-  color: #000000;         
-  -webkit-text-stroke: 0.6px #5a6cff; 
-  text-stroke: 0.6px #5a6cff;       
-  padding: 5px;
-  border: 2px solid #5a6cff;     
-  border-radius: 6px;
-  display: block;
-  flex-direction: column;
-  align-items: center; 
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;
-  background: rgba(128,128,128,0.85);
-  margin: 0 auto;
-  width: fit-content;
-}
+<div class="layout">
 
-.copy-btn {
-  padding: 10px 22px;
-  font-size: 16px;
-  background: transparent;
-  color: #000000; 
-  border: 4px solid #7CFF00;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s ease;
-  display: block;
-  margin: 10px auto;
-}
-.copy-btn:hover {
-  background: #7CFF00;    
-  color: #1a1a1a;  
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 20px;         
-}
-</style>
+  <div class="left">
+    <iframe src="https://discord.com/widget?id=1473111575479976078&theme=dark"
+      width="350" height="500"
+      frameborder="0"
+      sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
 
+  <div class="center">
+    <div class="server-ip">
+      Minecraft Server IP: <strong>play.mcidiots.net</strong>
+    </div>
 
-      <script>
-      function copyIP() {
-        const ip = "play.mcidiots.net";
-        navigator.clipboard.writeText(ip).then(() => {
-          const msg = document.getElementById("copiedMsg");
-          msg.style.display = "block";
-          setTimeout(() => msg.style.display = "none", 2000);
-        });
-      }
-      </script>
-    <iframe src="https://discord.com/widget?id=1473111575479976078&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-  </body>
+    <button class="copy-btn" onclick="navigator.clipboard.writeText('play.mcidiots.net')">
+      Copy IP
+    </button>
+  </div>
+
+  <div class="right">
+    <iframe
+      width="420"
+      height="236"
+      src="https://www.youtube.com/embed/videoseries?list=UUovMrrV5rrD5tTujlmPza_Q"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+</div>
+
+</body>
 </html>
